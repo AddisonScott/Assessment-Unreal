@@ -28,10 +28,14 @@ struct FPhotoTypes
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Location")
     FVector Location;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "IsSupported")
+	bool bIsSupported;
+
     FPhotoTypes()
     {
         Type = EPhotoTypes::None;
         Layer = 0;
 		Location = FVector::ZeroVector;
+		bIsSupported = false;
     }
 };
