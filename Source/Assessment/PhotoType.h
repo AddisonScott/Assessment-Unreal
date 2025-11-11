@@ -25,11 +25,23 @@ struct FPhotoTypes
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Layer")
     int32 Layer;
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "SupportingItems")
+    int32 SupportingItems;
+
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Location")
     FVector Location;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "IsSupported")
 	bool bIsSupported;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MinX")
+    float HalfWidth;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MaxX")
+    float HalfHeight;
+
+    
+
 
     FPhotoTypes()
     {
@@ -37,5 +49,9 @@ struct FPhotoTypes
         Layer = 0;
 		Location = FVector::ZeroVector;
 		bIsSupported = false;
+		SupportingItems = 0;
+        HalfWidth = 0;
+        HalfHeight = 0;
+
     }
 };

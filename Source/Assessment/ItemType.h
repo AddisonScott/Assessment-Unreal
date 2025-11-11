@@ -37,13 +37,20 @@ struct FItemTypes
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "IsSelected")
     bool bIsSelected;
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MinX")
+    float HalfWidth;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MaxX")
+    float HalfHeight;
+
 
     FItemTypes()
     {
         Type = EItemTypes::None;
 		Location = FVector::ZeroVector;
         ActorRef = nullptr;
-        isPlaced = false;
 		bIsSelected = false;
+        HalfWidth = 0;
+        HalfHeight = 0;
     }
 };
