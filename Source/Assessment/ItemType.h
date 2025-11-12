@@ -37,11 +37,14 @@ struct FItemTypes
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "IsSelected")
     bool bIsSelected;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MinX")
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "HalfWidth")
     float HalfWidth;
 
-    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MaxX")
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "HalfHeight")
     float HalfHeight;
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "DefaultPosition")
+    FVector DefaultPosition;
 
 
     FItemTypes()
@@ -52,5 +55,7 @@ struct FItemTypes
 		bIsSelected = false;
         HalfWidth = 0;
         HalfHeight = 0;
+		isPlaced = false;
+		DefaultPosition = FVector::ZeroVector;
     }
 };
