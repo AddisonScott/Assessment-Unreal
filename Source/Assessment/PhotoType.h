@@ -40,6 +40,11 @@ struct FPhotoTypes
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MaxX")
     float HalfHeight;
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "PhotoActor")
+	AActor* PhotoActor;
+
+
+
     
 
 
@@ -52,6 +57,7 @@ struct FPhotoTypes
 		SupportingItems = 0;
         HalfWidth = 0;
         HalfHeight = 0;
+		PhotoActor = nullptr;
 
     }
 };
